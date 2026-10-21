@@ -1,0 +1,18 @@
+# toolwerk
+
+> Digitale Mitarbeiter für Bau und Handwerk. Ein digitaler Mitarbeiter ist KI, die eine feste Aufgabe im Betrieb übernimmt, mit den Unterlagen des Betriebs arbeitet und alles zur Freigabe vorlegt. toolwerk ist eine Marke der Grünberg Solutions GmbH aus Perleberg (Brandenburg).
+
+## Seiten
+- [Startseite](https://www.tool-werk.de/): Überblick, Beispiele, Ablauf-Check und Terminvereinbarung
+- [Digitale Mitarbeiter](https://www.tool-werk.de/digitale-mitarbeiter): Ein digitaler Mitarbeiter ist KI, die eine feste Aufgabe in Ihrem Betrieb übernimmt: Ausschreibungen, Aufmaß, Angebote, Unterlagen. Ihr Team prüft und gibt frei.
+- [Zuschlagsfinder](https://www.tool-werk.de/zuschlagsfinder): Der Zuschlagsfinder sichtet jeden Tag öffentliche Bekanntmachungen, prüft sie gegen Ihr Leistungsprofil und legt Ihnen nur die passenden Ausschreibungen vor.
+- [prüffähig](https://www.tool-werk.de/pruefaehig): prüffähig macht aus Fotos, Notizen und Sprachnachrichten von der Baustelle Aufmaße und Leistungsnachweise. Ihr Büro prüft, gibt frei und rechnet ab.
+- [Guard](https://www.tool-werk.de/guard): Guard bereitet Gefährdungsbeurteilungen und Betriebsanweisungen aus Ihren Herstellerunterlagen vor. Nach Ihrer Freigabe per QR-Code direkt an der Maschine abrufbar.
+- [Personalportal](https://www.tool-werk.de/personalportal): Das Personalportal hält Unterlagen, Zuständigkeiten und Fristen Ihrer Mitarbeiter vollständig: Verträge, Nachweise, Qualifikationen und Termine an einem Ort.
+- [Angebote kalkulieren](https://www.tool-werk.de/angebote-kalkulieren): Ein digitaler Mitarbeiter bereitet Mengen aus Zeichnungen, Listen und Leistungsverzeichnissen vor und legt Ihnen einen Angebotsentwurf mit Ihren Preisen vor.
+- [Über uns](https://www.tool-werk.de/ueber-uns): toolwerk ist eine Marke der Grünberg Solutions GmbH aus Perleberg. Gründer Jonas Grünberg baut digitale Mitarbeiter für Bau und Handwerk und kommt dafür in den Betrieb.
+
+## Kontakt
+- Grünberg Solutions GmbH, Großer Markt 16, 19348 Perleberg
+- Telefon +49 152 55604258, kontakt@gruenbergsolutions.de
+- Erstgespräch: https://www.tool-werk.de/#check

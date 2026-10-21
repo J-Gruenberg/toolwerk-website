@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.tool-werk.de/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-<url><loc>https://www.tool-werk.de/impressum</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
-<url><loc>https://www.tool-werk.de/datenschutz</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url><loc>https://www.tool-werk.de/</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority><image:image><image:loc>https://www.tool-werk.de/og.jpg</image:loc></image:image></url>
+<url><loc>https://www.tool-werk.de/digitale-mitarbeiter</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><image:image><image:loc>https://www.tool-werk.de/og/digitale-mitarbeiter.jpg</image:loc></image:image></url>
+<url><loc>https://www.tool-werk.de/zuschlagsfinder</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><image:image><image:loc>https://www.tool-werk.de/og/zuschlagsfinder.jpg</image:loc></image:image></url>
+<url><loc>https://www.tool-werk.de/pruefaehig</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><image:image><image:loc>https://www.tool-werk.de/og/pruefaehig.jpg</image:loc></image:image></url>
+<url><loc>https://www.tool-werk.de/guard</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><image:image><image:loc>https://www.tool-werk.de/og/guard.jpg</image:loc></image:image></url>
+<url><loc>https://www.tool-werk.de/personalportal</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><image:image><image:loc>https://www.tool-werk.de/og/personalportal.jpg</image:loc></image:image></url>
+<url><loc>https://www.tool-werk.de/angebote-kalkulieren</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><image:image><image:loc>https://www.tool-werk.de/og/angebote-kalkulieren.jpg</image:loc></image:image></url>
+<url><loc>https://www.tool-werk.de/ueber-uns</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><image:image><image:loc>https://www.tool-werk.de/og/ueber-uns.jpg</image:loc></image:image></url>
 </urlset>

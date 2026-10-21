@@ -5,19 +5,51 @@
  "trailingSlash": false,
  "redirects": [
   {
+   "source": "/:path*",
+   "has": [
+    {
+     "type": "host",
+     "value": "angebote-in-minuten.de"
+    }
+   ],
+   "destination": "https://www.tool-werk.de/angebote-kalkulieren",
+   "permanent": true
+  },
+  {
+   "source": "/:path*",
+   "has": [
+    {
+     "type": "host",
+     "value": "www.angebote-in-minuten.de"
+    }
+   ],
+   "destination": "https://www.tool-werk.de/angebote-kalkulieren",
+   "permanent": true
+  },
+  {
    "source": "/aim",
-   "destination": "/",
-   "permanent": false
+   "destination": "/angebote-kalkulieren",
+   "permanent": true
   },
   {
    "source": "/aim/:path*",
-   "destination": "/",
-   "permanent": false
+   "destination": "/angebote-kalkulieren",
+   "permanent": true
   },
   {
    "source": "/index",
    "destination": "/",
    "permanent": true
+  },
+  {
+   "source": "/leistungen",
+   "destination": "/digitale-mitarbeiter",
+   "permanent": false
+  },
+  {
+   "source": "/kontakt",
+   "destination": "/#check",
+   "permanent": false
   }
  ],
  "headers": [
@@ -62,6 +94,15 @@
     {
      "key": "X-Frame-Options",
      "value": "SAMEORIGIN"
+    }
+   ]
+  },
+  {
+   "source": "/og/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=86400"
     }
    ]
   }

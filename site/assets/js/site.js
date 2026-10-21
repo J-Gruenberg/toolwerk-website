@@ -38,4 +38,13 @@
     show(3);
   });
   show(1);
+  // Von Unterseiten: /?aufgabe=...#check wählt die Aufgabe direkt vor
+  try {
+    var wanted = new URLSearchParams(location.search).get('aufgabe');
+    if (wanted) {
+      funnel.querySelectorAll('.tw-task').forEach(function (b) {
+        if (b.getAttribute('data-task') === wanted) pick(wanted, false);
+      });
+    }
+  } catch (e) {}
 })();
