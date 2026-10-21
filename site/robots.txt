@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.tool-werk.de/sitemap.xml
