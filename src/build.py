@@ -376,7 +376,8 @@ def build_home(visuals_out, small):
     pre = f'<link rel="preload" as="image" href="/assets/img/hero-garkisch-leitungsgraben.webp" imagesrcset="{ss}" imagesizes="(max-width: 1132px) calc(100vw - 32px), 1100px" fetchpriority="high">\n'
     title = 'Digitale Mitarbeiter für Bau und Handwerk | toolwerk'
     desc = 'Wir übernehmen die Arbeit, die im Büro liegen bleibt: Ausschreibungen, Aufmaß, Angebote, Unterlagen. Digitale Mitarbeiter mit KI, Ihr Team gibt frei.'
-    page = head(title, desc, '/', '/og.jpg', ld, extra=pre) + f'<body style="margin:0">\n{s}\n<script src="/assets/js/site.js" defer></script>\n</body>\n</html>\n'
+    verify = '<meta name="google-site-verification" content="NMtPllCN6v6b00980zUaNbF6ddGywNdEgZUKuCCb0V0">\n'
+    page = head(title, desc, '/', '/og.jpg', ld, extra=verify + pre) + f'<body style="margin:0">\n{s}\n<script src="/assets/js/site.js" defer></script>\n</body>\n</html>\n'
     (OUT / 'index.html').write_text(page)
     return title
 
