@@ -24,63 +24,28 @@
   });
   funnel.querySelector('.tw-back').addEventListener('click', function () { show(1); });
   funnel.querySelector('.tw-reset').addEventListener('click', function () { document.getElementById('tw-form').reset(); state.task = ''; show(1); });
-  var errorEl = document.getElementById('tw-error');
-  var errorText = errorEl.textContent;
-  var submitBtn = document.querySelector('#tw-form button[type="submit"]');
-  var submitText = submitBtn ? submitBtn.textContent : '';
-  var busy = false;
-  function fehler(text) {
-    errorEl.textContent = text || errorText;
-    errorEl.hidden = false;
-    document.getElementById('tw-mail').focus();
-  }
-  // Prüft serverseitig, ob die Mail-Domain Post empfangen kann. Im Zweifel: durchlassen.
-  function domainOk(mail, done) {
-    var domain = mail.split('@').pop();
-    var fertig = false;
-    function ende(ok) { if (!fertig) { fertig = true; done(ok); } }
-    setTimeout(function () { ende(true); }, 4000);
-    try {
-      fetch('/api/mail-check?d=' + encodeURIComponent(domain), { cache: 'no-store' })
-        .then(function (r) { return r.ok ? r.json() : { ok: true }; })
-        .then(function (j) { ende(!(j && j.ok === false)); })
-        .catch(function () { ende(true); });
-    } catch (err) { ende(true); }
-  }
-  function weiter(mail) {
-    var firma = document.getElementById('tw-firma').value.trim();
-    var tel = document.getElementById('tw-tel').value.trim();
-    var note = 'Aufgabe: ' + (state.task || 'nicht gewählt') + (firma ? '. Firma: ' + firma : '') + (tel ? '. Telefon: ' + tel : '') + '. Quelle: tool-werk.de';
-    var url = CAL + '?email=' + encodeURIComponent(mail) + '&a1=' + encodeURIComponent(note);
-    var cal = document.getElementById('tw-calendar');
-    cal.href = url;
-    cal.setAttribute('target', '_blank');
-    show(3);
-  }
   document.getElementById('tw-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    if (busy) return;
     var mail = document.getElementById('tw-mail').value.trim();
     var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail);
-    errorEl.hidden = true;
-    if (!ok) { fehler(); return; }
+    document.getElementById('tw-error').hidden = ok;
+    if (!ok) { document.getElementById('tw-mail').focus(); return; }
+    var cal = document.getElementById('tw-calendar');
     // Fallenfeld: Menschen sehen es nicht, Bots füllen es aus. Dann still ins Leere laufen lassen.
     var hp = document.getElementById('tw-hp');
     if (hp && hp.value) {
-      var cal = document.getElementById('tw-calendar');
       cal.href = '#check';
       cal.removeAttribute('target');
       show(3);
       return;
     }
-    busy = true;
-    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Einen Moment …'; }
-    domainOk(mail, function (domainGut) {
-      busy = false;
-      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitText; }
-      if (!domainGut) { fehler('Unter dieser E-Mail-Adresse kommt keine Post an. Bitte prüfen Sie die Schreibweise.'); return; }
-      weiter(mail);
-    });
+    var firma = document.getElementById('tw-firma').value.trim();
+    var tel = document.getElementById('tw-tel').value.trim();
+    var note = 'Aufgabe: ' + (state.task || 'nicht gewählt') + (firma ? '. Firma: ' + firma : '') + (tel ? '. Telefon: ' + tel : '') + '. Quelle: tool-werk.de';
+    var url = CAL + '?email=' + encodeURIComponent(mail) + '&a1=' + encodeURIComponent(note);
+    cal.href = url;
+    cal.setAttribute('target', '_blank');
+    show(3);
   });
   show(1);
   // Von Unterseiten: /?aufgabe=...#check wählt die Aufgabe direkt vor
